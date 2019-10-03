@@ -20,7 +20,7 @@
     <link rel='stylesheet' href='./css/index.css' />
   </head>
 
-  <body onload='totalQty(); loadProduct()' cz-shortcut-listen='true'>
+  <body onload='loadProduct()' cz-shortcut-listen='true'>
     <header class='m-0 p-0 cust-ouline-0 border-0 w-100 mw-100'>
       <div class='container-fluid'>
         <div class='row no-gutters'>
@@ -240,9 +240,8 @@
               } else {
                 let indexDetails =
                 `
-                  <tr>
-                    <td colspan="4" class='text-center'>No Record found</td>
-                  </tr>
+                  <div class='text-center m-5'>No Records found</div>
+                  
                 `
                 document.querySelector('#indexImgId').innerHTML = indexDetails
               }
@@ -316,33 +315,33 @@
       
 
 
-addProduct = () => {
-  const product = {
-    imgURL: document.getElementsByName('image')[0].value,
-    name: document.getElementsByName('name')[0].value,
-    price: document.getElementsByName('price')[0].value,
-    retailPrice: document.getElementsByName('retailPrice')[0].value,
-    discount: document.getElementsByName('discount')[0].value,
-    dataNumber: document.getElementsByName('dataNumber')[0].value,
-  }
-  var myHeaders = new Headers()
-  myHeaders.append('Content-Type', 'application/json')
+// addProduct = () => {
+//   const product = {
+//     imgURL: document.getElementsByName('image')[0].value,
+//     name: document.getElementsByName('name')[0].value,
+//     price: document.getElementsByName('price')[0].value,
+//     retailPrice: document.getElementsByName('retailPrice')[0].value,
+//     discount: document.getElementsByName('discount')[0].value,
+//     dataNumber: document.getElementsByName('dataNumber')[0].value,
+//   }
+//   var myHeaders = new Headers()
+//   myHeaders.append('Content-Type', 'application/json')
 
-  fetch('http://localhost:700/products', {
-    method: POST,
-    headers: myHeaders,
-    mode: 'cors',
-    cache: 'default',
-    body: JSON.stringify(product)
-  }).then((res) => {
-    if (res.status === 200) {
-      alert('product added successfully!')
-      loadProduct()
-    }
-  }).catch((e) => {
-    console.log('Error', e)
-  })
-}
+//   fetch('http://localhost:700/products', {
+//     method: POST,
+//     headers: myHeaders,
+//     mode: 'cors',
+//     cache: 'default',
+//     body: JSON.stringify(product)
+//   }).then((res) => {
+//     if (res.status === 200) {
+//       alert('product added successfully!')
+//       loadProduct()
+//     }
+//   }).catch((e) => {
+//     console.log('Error', e)
+//   })
+// }
 
 
 
@@ -417,9 +416,6 @@ function goToWishList () {
     </script>
   
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src='./js/cart.js'></script>
-    <script src='./js/item-details.js'></script>
-    <script src='./js/index.js'></script>
     <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>

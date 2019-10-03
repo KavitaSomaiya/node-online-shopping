@@ -8,7 +8,7 @@ var express = require('express')
 
 var app = express()
 
-app.post('/addUser', function (req, res) {
+app.post('/add', function (req, res) {
     console.log(req)
     var imgUrl = req.body.imgUrl
     var name = req.body.name
