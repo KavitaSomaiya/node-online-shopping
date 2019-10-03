@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang='en'>
+  
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no'>
+    <link rel='shortcut icon' type='image/x-icon' href='./images/favicon.ico' sizes='32x32' />
+    <title>My Wish List</title>
+    <link href='http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' rel='stylesheet' />
+    <link href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' rel='stylesheet' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous' />
+    <style>
+      /* font-family: 'Roboto', sans-serif; */
+      @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+      /* font-family: 'Roboto Slab', serif; */
+      @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+      @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+    </style>
+    <link rel='stylesheet' href='./css/bootstrap.min.css' />
+    <link rel='stylesheet' href='./css/animate.css' />
+    <link rel='stylesheet' href='./css/index.css' />
+  </head>
+  
+  <body onload='createWishListData();' cz-shortcut-listen='true'>
+    <div class='cust-bg'>
+      <header class='m-0 p-0 cust-outline-0 border-0 w-100 mw-100 fixed-top' id='cartHeaderId'>
+        <div class='container-fluid'>
+          <div class='row'>
+            <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 w-100 mw-100'>
+              <nav class='navbar navbar-expand-sm navbar-light w-100 mw-100 justify-content-between pl-0' role='navigation'>
+                <div class='col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 p-0 w-100 mw-100'>
+                  <div class='navbar-brand' href='#'>
+                    <div class='d-flex align-items-center'>
+                      <a href='#' title="Back" data-toggle="tooltip" onclick='goToIndexPage();'>
+                        <i class='fas fa-arrow-left ml-2 mr-3' aria-hidden='true'></i>
+                      </a>
+                      <a href='#' title="Home" data-toggle="tooltip" onclick='goToIndexPage();'>
+                        <img class='rounded-circle' src='./images/favicon.ico' alt='favicon' />
+                      </a>
+                    </div>
+                  </div>              
+                </div>
+                <div class='col-lg-8 col-xl-8 d-lg-block d-xl-block p-0 w-100 mw-100 d-none d-sm-none d-md-none'>
+                  <div class="topnav border w-100 mw-100">
+                    <div class="search-container w-100 mw-100 bg-white cart-page-navbar">
+                      <form class='w-100 mw-100' action='#' method='POST'>
+                        <input type="text" placeholder="Search..." name="search" />
+                        <button class='bg-white mr-0 pr-0' type="submit">
+                          <i class="fa fa-search"></i>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class='col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 p-0 w-100 mw-100'>
+                  <ul class="nav navbar-nav align-items-center justify-content-end float-right">
+                    <div class="dropdown my-0" id='cartPageDropdownId'>
+                      <a class="text-white" href="#" id="navbardrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User
+                        <i class='fas fa-angle-down text-white fx ml-2 ml-sm-2 ml-md-2 ml-lg-2 ml-xl-2' id='caretId' aria-hidden='true'></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right py-0" id='dropdownMenu'>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-user-circle mr-3' aria-hidden='true'></i>
+                          My Profile
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-arrows-alt mr-3' aria-hidden='true'></i>
+                          Flipkart Plus Zone
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-gamepad mr-3' aria-hidden='true'></i>
+                          Game Zone
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-folder-plus mr-3' aria-hidden='true'></i>
+                          Orders
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-heart mr-3' aria-hidden='true'></i>
+                          Wishlist
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-file-alt mr-3' aria-hidden='true'></i>
+                          My Chats
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-folder-open mr-3' aria-hidden='true'></i>
+                          Rewards
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-gift mr-3' aria-hidden='true'></i>
+                          Gift Card
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-bell mr-3' aria-hidden='true'></i>
+                          Notification
+                        </a>
+                        <a class="dropdown-item d-flex border-bottom py-3 align-items-center" href="#">
+                          <i class='fas fa-power-off mr-3' aria-hidden='true'></i>
+                          Logout
+                        </a>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
+              </nav>            
+            </div>
+            <div class='col-12 col-sm-12 col-md-12 d-block d-sm-block d-md-block d-lg-none d-xl-none p-0'>
+              <div class="topnav border w-100 mw-100">
+                <div class="search-container w-100 mw-100 bg-white cart-page-navbar">
+                  <form class='w-100 mw-100' action='#' method='POST'>
+                    <input type="text" placeholder="Search..." name="search" />
+                    <button class='bg-white mr-0 pr-0' type="submit">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+      <main>
+        <article>
+          <section class='mr-0 ml-0 mb-0 p-0 cust-outline-0 border-0 w-100 mw-100 cartSection'>
+            <div class='container'>
+              <div class='row'>
+                <div class='col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 w-100 mw-100'>
+                  <div class='mt-5'>              
+                    <div class='cartSectionBg'>
+                      <div class='d-flex py-2 align-items-center border-bottom justify-content-center'>
+                        <div class='w-68 mw-100 my-2 cartSectionHeadings pl-2 pl-sm-2 pl-md-2 pl-lg-3 pl-xl-3'>
+                          <h4 class='mb-0' id='totalItemInWishList'>My Wish List()</h4>
+                        </div>
+                        <div class='w-32 mw-100 pr-1 pr-sm-1 pr-md-1 pr-lg-2 pr-xl-2'>
+                          <div class='d-flex justify-content-between cartSectionButton'>
+                            <div class='d-flex align-items-center cartSectionHeadings'>
+                              <svg viewBox="0 0 9 12" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#2874f0" fill-rule="evenodd" d="M4.2 5.7c-.828 0-1.5-.672-1.5-1.5 0-.398.158-.78.44-1.06.28-.282.662-.44 1.06-.44.828 0 1.5.672 1.5 1.5 0 .398-.158.78-.44 1.06-.28.282-.662.44-1.06.44zm0-5.7C1.88 0 0 1.88 0 4.2 0 7.35 4.2 12 4.2 12s4.2-4.65 4.2-7.8C8.4 1.88 6.52 0 4.2 0z"></path>
+                              </svg>
+                              <h5 class='mb-0 ml-1 d-flex'>
+                                <span class='d-none d-sm-none d-md-none d-lg-block d-xl-block mr-0 mr-sm-0 mr-md-0 mr-lg-2 mr-xl-2'>Pincode</span>
+                                <span class>360005</span>
+                              </h5>
+                            </div>                        
+                            <button class='btn-outline-secondary border-0' type='button'>Change</button>
+                          </div>                              
+                        </div>                            
+                      </div>                          
+                      <div class='d-flex mw-100 w-100'>
+                        <div class='w-68 mw-100'>
+                        </div>
+                        <div class='w-32 mw-100'>
+                          <div class='px-1 px-sm-1 px-md-2 px-lg-2 px-xl-2'>
+                            <div class='cartContainerBorderBottom'>
+                            </div>
+                          </div>
+                        </div>                      
+                      </div>
+                      <div id='myWishList'>
+                  <!--  <div class='d-flex justify-content-between py-4 pl-4 pl-sm-4 pl-md-4 pl-lg-3 pl-xl-3 align-items-top'>
+                          <div class='mw-100' style="width: 13%;">
+                            <div class='d-flex flex-column'>
+                              <div class='align-middle cartItemImg text-center p-1 p-sm-1 p-md-1 p-lg-2 p-xl-2'>
+                                <a class='text-center' href='#'>
+                                  <img src='./images/mob-6.jpeg' alt />
+                                </a>                          
+                              </div>      
+                            </div>                        
+                          </div>
+                          <div class='mw-100 cartItemDetails ml-5' style='width: 56%;'>
+                            <div class='d-flex flex-column justify-content-start pt-1 pt-sm-1 pt-md-1 pt-lg-2 pt-xl-2'>
+                              <div class='itemNameClass'><a class href='#'>item name</a></div>
+                              <p class='sellerName mt-1 mt-sm-1 mt-md-2 mt-lg-3 mt-xl-3'>Seller: Seller name</p>
+                              <div class='d-flex mt-1 mt-sm-1 mt-md-1 mt-lg-2 mt-xl-2 justify-content-start align-items-center'>
+                                <span class='itemPrice'>&#x20B9;560</span>
+                                <del><span class='itemRealPrice ml-2'>&#x20B9;3998</span></del>
+                                <span class='discountPer ml-2'>85% Off</span>
+                                <div class='offerQty ml-2 d-none d-sm-none d-md-block d-lg-block d-xl-block' id='offerQtyId'>
+                                  <a>
+                                    1 offer applied
+                                    <i class='' aria-hidden='true'></i>
+                                  </a> 
+                                </div>                                            
+                              </div> 
+                            </div>
+                          </div>
+                          <div class='mw-100 pt-1 pt-sm-1 pt-md-1 pt-lg-2 pt-xl-2 deliveryDetails' style="width: 31%;">
+                            <p>
+                              <i class='fas fa-trash-alt' aria-hidden='true'></i>
+                            </p>                      
+                          </div>                  
+                        </div>                    
+                        <nav class='navbar navbar-expand-sm bg-white navbar-dark cart-sticky-bottom'>
+                          <a class='bg-white btn btn-link shadow py-3 mt-3 mt-sm-3 mt-md-0 mt-lg-0 mt-xl-0 mr-1 mr-sm-4' href='#'>
+                            <span class='mr-2'> < </span>
+                            Continue Shopping
+                          </a>
+                          <button class='btn btn-link shadow-lg py-3 mt-3 mt-sm-3 mt-md-0 mt-lg-0 mt-xl-0 ml-0 ml-sm-4 ml-md-4 ml-lg-5 ml-xl-5' type='button' tabindex='20'>Place Order</button>
+                        </nav>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class='border-0 cust-outline-0 m-0 p-0 w-100 mw-100'>
+        <div class='row no-gutters mx-auto justify-content-center align-items-center border'>
+          <div class='my-5 ftrClass'>
+            <nav class='navbar navbar-expand-sm justify-content-center align-items-center'>
+              <span class='navbar-brand'>Policies:</span>
+              <a class='btn btn-link py-0 px-2' href='#'>Returns Policy</a>
+              <a class='btn btn-link py-0 px-2' href='#'>Terms of use</a>
+              <a class='btn btn-link py-0 px-2' href='#'>Security</a>
+              <a class='btn btn-link py-0 px-2' href='#'>Privacy</a>
+              <a class='btn btn-link py-0 px-2' href='#'>Infringement</a>
+              <span class='py-0 ml-3 ml-sm-3 ml-md-3 ml-lg-5 ml-xl-5 ftrInfo'>
+                © 2007-2019
+                <span>Flipkart.com.</span>
+              </span>
+            </nav>
+          </div>            
+        </div>
+      </footer>
+    </div> <!-- <div class='cust-bg'> -->
+
+    <script src='./js/index.js'></script>
+    <script src='./js/cart.js'></script>
+    <script src='./js/wish-list.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+    <script src='./js/bootstrap.min.js' ></script>
+
+  </body>
+</html>

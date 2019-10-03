@@ -1,0 +1,1978 @@
+*, :after, :before{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+*, html{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+.selector-for-some-widget{
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: border-box
+}
+body{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+    outline: none
+}
+*, html, body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;    
+    letter-spacing: normal;
+    line-height: 1.4;
+    color: #212121
+    /* background: #f1f3f6; */
+}
+html, body{
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden
+}
+.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+@media (min-width:576px){.container{max-width:540px}}
+@media (min-width:768px){.container{max-width:720px}}
+@media (min-width:992px){.container{max-width:960px}}
+@media (min-width:1200px){.container{max-width:1280px}}
+.row{   
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -15px
+}
+
+.cust-container{
+    padding: .5rem 1.5rem;
+    margin: 0 auto; 
+    height: auto;
+    max-width: 100%;
+    clear:both
+}
+
+
+/* -------- CUSTOMIZED GENERAL CLASSES ------------------- */
+
+.cust-outline-0{
+    outline: 0
+}
+.cust-bg-transparent{
+    background: transparent
+}
+.cust-bg-black{
+    background: #000000
+}
+.cust-bg-inherit{
+    background: inherit
+}
+.cust-overflow-hidden{
+    overflow: hidden
+}
+.cust-overflow-auto{
+    overflow: auto
+}
+.cust-po-rel{
+    position: relative
+}
+.cust-po-abs{
+    position: absolute
+}
+.cust-vertical-align-middle{
+    vertical-align: middle
+}
+.cust-text-white{
+    color: #ffffff
+}
+.cust-text-black{
+    color: #000000
+}
+.desk-my-one{
+    margin-top: 49px;
+    margin-bottom: 49px
+    
+}
+.border-top-bottom{
+    border-right: 0;
+    border-left: 0;
+    border-top: 3px solid #E3E4E5;
+    border-bottom: 3px solid #E3E4E5
+}
+.cust-border-bottom{
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 3px solid #E3E4E5
+}
+.w-68 {
+    width: 68%
+}
+.w-32 {
+    width: 32%
+}
+
+/* ------------------ NAVBAR ---------------------------------------------------- */
+header .row{
+    background: #2874F0
+}
+.navbar-brand i{
+    color: #ffffff;
+    font-size: 16px
+}
+#dropdownMenu {
+    left: auto
+}
+.navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    outline: none
+}
+.navbar-toggler{
+    padding: .25rem .0
+}
+.navbar-light .navbar-toggler {
+    border: none
+}
+
+.navbar .container-fluid .navbar-toggler{
+    border: 0;
+    outline: 0
+}
+.navbar-toggler #navbar-toggle-icon-id{
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=ffffff');
+    font-size: 19px;
+    font-weight: 600
+}
+.navbar .container-fluid button:hover{
+    cursor: inherit
+}
+.container-fluid .navbar-toggler a:hover{
+    cursor: pointer;
+    background: transparent
+}
+.container-fluid .navbar-toggler span:hover{
+    cursor: pointer;
+    background: transparent
+}
+.navbar-toggler a i .badge-cart-notify{
+    font-size: 8.755px;
+    font-weight: 500;
+    position:relative;
+    top: -10px;
+    left: -8px;
+    background: #D33030;
+    color: #000000
+}
+.navbar-toggler a i .badge-check-notify{
+    font-size: 5.5px;
+    position:relative;
+    top: 3.5px;
+    left: -9px;
+    background: #2874F0;
+    border-radius: 50%
+}
+.navbar-toggler a:hover, .navbar-toggler a i span:hover, .navbar-toggler a i i:hover{
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none;
+    text-transform: none
+}
+.header .row .navbar .navbar-collapse{
+    /*background: #2874F0; */
+    background: rgba(40, 116, 240, 0.2)
+}
+#collapsibleNavbar ul{
+    width: 100%;
+    max-width: 100%
+}
+#collapsibleNavbar ul li{
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    padding: 3px 0
+}
+#collapsibleNavbar ul li:first-child{
+    padding-top: 8px
+}
+#collapsibleNavbar ul li a{
+    width: 100%;
+    max-width: 100%;
+    color: #ffffff;
+    font-size: 13.5px
+}
+#collapsibleNavbar ul li a:hover{
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(202, 199, 199)
+}
+
+
+/* --------------- MAIN IMAGE SECTION --------------------------------*/
+
+
+#mainImgSection .mainImgSectionImage img{
+    height: auto;
+    width: 100%;
+    cursor: pointer;
+    max-width: 100%
+}
+#mainImgSection .mainImgSectionP, #backHtmlOnOffer .mainImgSectionP {
+    float: left;
+    background: #26A541;
+    height: 30px;
+    cursor: pointer;
+    width: 88px
+}
+#mainImgSection .mainImgSectionP P, #backHtmlOnOffer .mainImgSectionP p{
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 5px 5px 5px 5px
+}
+#mainImgSection  [type=button] {
+    -webkit-appearance: none;
+    cursor: pointer
+}
+
+#mainImgSection .mainImgSectionHeart{
+    float: right;
+    margin-right: 20px;
+    width: 49px;
+    cursor: pointer;
+    height: auto
+}
+#backHtmlImg [type=button]{
+    -webkit-appearance: none;
+    cursor: pointer
+}
+.heartClassFontSize{
+    font-size: 21px
+} 
+.heartClassGray {
+    color: #A1A1A1
+}
+
+.heartClassRed {
+    color: #B81010
+}
+
+.img-grid-ul{
+    display: -ms-flexbox!important;
+    display: -webkit-flex!important;
+    display: flex!important;
+    width: 100%;
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+.img-grid-ul li{
+    width: 25%;
+    border: 1.67px solid #f0f0f0;
+    cursor: pointer;
+    max-width: 100%;
+}
+.img-grid-ul li a{
+    display: block;
+    text-align: center
+}
+.img-grid-ul li a:hover {
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none
+}
+.img-grid-ul li a img{
+    height: 1280px;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (max-width: 575.98px){.img-grid-ul li a img{height: 54px;}}
+
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.img-grid-ul li a img{height: 64px;}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.img-grid-ul li a img{height: 84px;}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.img-grid-ul li a img{height: 114px;}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.img-grid-ul li a img{height: 144px;}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {.img-grid-ul li a img{height: 150px;}}
+
+
+
+#productDetails a i, #productDetails a p{
+    color: #2874F0;
+    letter-spacing: 0.7px
+}
+#productDetails a:hover{
+    cursor: pointer;
+    background: transparent;
+    text-decoration: none
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (max-width: 575.98px){#productDetails a p,#productDetails a i{font-size: 14.5px}}
+
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#productDetails a p,#productDetails a i{font-size: 21.5px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#productDetails a p,#productDetails a i{font-size: 21.5px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#productDetails a p,#productDetails a i{font-size: 31.5px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#productDetails a p,#productDetails a i{font-size: 41.5px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#productDetails a p,#productDetails a i{font-size: 43px}}
+
+
+/* -------------- PRODUCT DESCRIPTION -----------------------------------------*/
+
+#productDesc h1{
+    color: #212121;
+    line-height: 25.2px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+    display: contents;
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#productDesc h1,#productDesc h1 span a{font-size: 12.5px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#productDesc h1,#productDesc h1 span a{font-size: 18.5px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#productDesc h1,#productDesc h1 span a{font-size: 22.5px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#productDesc h1,#productDesc h1 span a{font-size: 28.5px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#productDesc h1,#productDesc h1 span a{font-size: 33.5px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#productDesc h1,#productDesc h1 span a{font-size: 35px}}
+
+
+
+
+#productDesc h1 span{
+    padding: 0;
+    line-height: 1.4;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inline-block;
+}
+#productDesc h1 span a{
+    line-height: 25.2px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: start;
+    text-indent: 0px
+}
+#productDesc #ratings, #productDesc #reviews, #productDesc #creditCardScheme, #productDesc img{
+    cursor: pointer
+}
+
+/* ------------------ emiProductExchange ----------------------------------------*/
+
+#emiProductExchange p{
+    cursor: pointer;
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#emiProductExchange p{font-size: 14px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#emiProductExchange p{font-size: 18}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#emiProductExchange p{font-size: 22px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#emiProductExchange p{font-size: 26px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#emiProductExchange p{font-size: 30px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#emiProductExchange p{font-size: 32px}}
+
+
+
+
+/* ----------- addToCartBuyNow ----------------------------------------------------------------------*/
+
+#addToCartBuyNow p{
+    color: #FF5252;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#addToCartBuyNow p{font-size:15px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#addToCartBuyNow p{font-size:15px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#addToCartBuyNow p{font-size:15px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#addToCartBuyNow p{font-size:15px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#addToCartBuyNow p{font-size:46px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#addToCartBuyNow p{font-size:46.888px}}
+
+
+#addToCartBuyNow button{
+    border: 1px solid #fb641b;
+    font-weight: 500;
+    background-color: #fb641b;
+    box-shadow: 0 1px 2px 0 rgba(95, 95, 95, 0.2);
+    color: #fff;
+    width: auto;
+    cursor: pointer;
+    text-align: center;
+    margin: 16px 0;
+    letter-spacing: 1px
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#addToCartBuyNow button{font-size: 13.5px;padding: 5px 40px;height: 34px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#addToCartBuyNow button{font-size: 14.5px;padding: 7px 80px;height: 50px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#addToCartBuyNow button{font-size: 16px;padding: 5px 100px;height: 56px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#addToCartBuyNow button{font-size: 18px;padding: 7px 120px;height: 62px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#addToCartBuyNow button{font-size: 26px;padding: 10px 220px;height: 82px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#shareSection i, #shareSection p{font-size: 24px}}
+
+
+
+/* ------------ SHARE ----------------------------------------------------------------------*/
+#shareSection{
+    cursor: pointer;
+} 
+
+#shareSection i, #shareSection p{
+    color: #A1A1A1;
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#shareSection i, #shareSection p{font-size: 13px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#shareSection i, #shareSection p{font-size: 13.5px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#shareSection i, #shareSection p{font-size: 14px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#shareSection i, #shareSection p{font-size: 18px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#shareSection i, #shareSection p{font-size: 20px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#shareSection i, #shareSection p{font-size: 22px}}
+
+
+/* ------------- viewDetails --------------------------------------------------------------------*/
+
+#viewDetails  [type=button] {
+    -webkit-appearance: none;
+    cursor: pointer
+}
+#viewDetails p {
+    font-weight: 400;
+    letter-spacing: 0.55px;
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#viewDetails p, #viewDetails .material-icons{font-size: 14px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#viewDetails p, #viewDetails .material-icons{font-size: 15px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#viewDetails p, #viewDetails .material-icons{font-size: 17px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#viewDetails p, #viewDetails .material-icons{font-size: 20px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#viewDetails p, #viewDetails .material-icons{font-size: 23px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#viewDetails p, #viewDetails .material-icons{font-size: 25px}}
+
+
+#hiddenViewDetails h4{
+    padding-bottom:5.5px
+}
+#hiddenViewDetails ul{
+    padding-inline-start: 1.255rem
+    
+}
+#hiddenViewDetails ul li, #hiddenViewDetails ul li p{
+    color: #6c757d!important
+}
+#hiddenViewDetails ul li p{
+    margin-bottom: 0
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#hiddenViewDetails h4{font-size: 11.5px}#hiddenViewDetails ul li p{font-size: 9px}#hiddenViewDetails .plus-img img{width: 85%}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#hiddenViewDetails h4{font-size: 14px}#hiddenViewDetails ul li p{font-size: 12px}#hiddenViewDetails .plus-img img{width: 85%}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#hiddenViewDetails h4{font-size: 16px}#hiddenViewDetails ul li p{font-size: 13px}#hiddenViewDetails .plus-img img{width: auto}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#hiddenViewDetails h4{font-size: 17px}#hiddenViewDetails ul li p{font-size: 13.335px}#hiddenViewDetails .plus-img img{width: auto}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#hiddenViewDetails h4{font-size: 18px}#hiddenViewDetails ul li p{font-size: 16px}#hiddenViewDetails .plus-img img{width: auto}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#hiddenViewDetails h4{font-size: 20px}#hiddenViewDetails ul li p{font-size: 17px}#hiddenViewDetails .plus-img img{width: auto}}
+
+
+/*------------ ALL DETAILS ----------------------------------------------------------------------------------*/
+
+#allDetails  [type=button] {
+    -webkit-appearance: none;
+    cursor: pointer
+}
+#allDetails .cust-border-bottom{
+    border-right: 0;
+    border-left: 0;
+    border-top: 3px solid #E3E4E5;
+    border-bottom: 3px solid #E3E4E5
+}
+#allDetails p, #allDetails .material-icons{
+    font-weight: 400;
+    letter-spacing: 0.55px;
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#allDetails p, #allDetails .material-icons{font-size: 14px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#allDetails p, #allDetails .material-icons{font-size: 15px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#allDetails p, #allDetails .material-icons{font-size: 17px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#allDetails p, #allDetails .material-icons{font-size: 20px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#allDetails p, #allDetails .material-icons{font-size: 23px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#allDetails p, #allDetails .material-icons{font-size: 24.888px}}
+
+
+
+
+#hiddenAllDetails h3{
+    color: #212121;
+    font-size: 24px;
+    line-height: 24px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+    margin-bottom: 0
+}
+#hiddenAllDetails p{
+    color: #212121;
+    line-height: 18.06px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#hiddenAllDetails p{font-size: 10.5px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#hiddenAllDetails p{font-size: 11.755px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#hiddenAllDetails p{font-size: 12.755px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#hiddenAllDetails p{font-size: 13px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#hiddenAllDetails p{font-size: 14.999px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#hiddenAllDetails p{font-size: 15.999px}}
+
+
+
+#hiddenAllDetails h4{
+    color: #212121;
+    font-size: 20px;
+    line-height: 25.2px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+    margin-bottom: 0;
+    padding-bottom: 18px
+}
+.cust-table{
+    width: 100%;
+    border-collapse: collapse
+}
+.cust-table tr{
+    padding-bottom: 26px
+}
+.cust-table td{
+    text-transform: capitalize;
+    text-indent: 0
+}
+.cust-table td:first-child{
+    color:#878787
+}
+.cust-table td:last-child{
+    color: #212121
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/ 
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cust-table td{font-size: 11.999px}.cust-table td:first-child{width: 32%;}.cust-table td:last-child{width: 68%;}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cust-table td{font-size: 11.999px}.cust-table td:first-child{width: 32%;}.cust-table td:last-child{width: 68%;}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cust-table td{font-size: 12.999px}.cust-table td:first-child{width: 25%;}.cust-table td:last-child{width: 75%;}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cust-table td{font-size: 13.999px}.cust-table td:first-child{width: 20%;}.cust-table td:last-child{width: 80%;}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.cust-table table td{font-size: 14.999px}.cust-table td:first-child{width: 17%;}.cust-table td:last-child{width: 83%;}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {.cust-table table td{font-size: 15.999px}.cust-table td:first-child{width: 19%;}.cust-table td:last-child{width: 85%;}}
+
+
+
+#hiddenAllDetails li p{
+    color:#878787;
+    font-size: 14px;
+    line-height: 19.6px;
+    vertical-align: top;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(135, 135, 135);
+    text-align: start;
+    text-indent: 0px
+}
+
+
+/* ----------- SEARCH ------------------------------------------------------------------------------------------*/
+
+.search {
+    position: absolute;
+    right: 190px;
+    top: 12px;
+    z-index: 9;
+    float: right;
+    text-align: left;
+    overflow: hidden;
+    background: #ffffff;
+    transition: all .3s ease-in-out;
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/ 
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.search{width:86px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.search{width:180px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.search{width:190px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.search{width:200px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.search{width:210px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {.search{width:224px}}
+
+
+
+/* ------------ BACK.HTML ------------------------------------------------------------------------------------*/
+
+.searchTwo{
+    position: absolute;
+    top: 12px;
+    z-index: 9;
+    float: right;
+    text-align: left;
+    overflow: hidden;
+    background: #ffffff;
+    transition: all .3s ease-in-out;
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/ 
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.searchTwo{width:86px; right: 220px;}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.searchTwo{width:180px; right: 220px;}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.searchTwo{width:190px; right: 248px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.searchTwo{width:200px; right: 248px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.searchTwo{width:210px; right: 248px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {.searchTwo{width:220px; right: 254px}}
+
+
+.sortFilterSection p {
+    font-weight: 600;
+    letter-spacing: 0.766px;
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/ 
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.sortFilterSection i{font-size: 14.5px}.sortFilterSection p{font-size: 14.5px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.sortFilterSection i{font-size: 16.5px}.sortFilterSection p{font-size: 16.5px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.sortFilterSection i{font-size: 20.5px}.sortFilterSection p{font-size: 21px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.sortFilterSection i{font-size: 22.5px}.sortFilterSection p{font-size: 23px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){.sortFilterSection i{font-size: 24.5px}.sortFilterSection p{font-size: 25px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {.sortFilterSection i{font-size: 25.5px}.sortFilterSection p{font-size: 26px}}
+
+
+#backHtmlCreditCardScheme p{
+    font-weight: 500;
+    font-size: 16.5px
+}
+
+.sortFilterSection  [type=button] {
+    -webkit-appearance: none;
+    cursor: pointer
+}
+
+#indexImgId li .backHtmlImgClass, #indexImgId li #productDesc2 h1 {
+    cursor: pointer
+}
+
+.backHtmlImgList {
+    position: relative;
+    border-bottom: 1.677px solid #f0f0f0;
+}
+#backHtmlImg .backHtmlImgClass {
+    position: relative
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/ 
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#backHtmlImg .backHtmlImgClass{height: 90px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#backHtmlImg .backHtmlImgClass{height: 100px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#backHtmlImg .backHtmlImgClass{height: 150px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#backHtmlImg .backHtmlImgClass{height: 190px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px){#backHtmlImg .backHtmlImgClass{height: 220px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1898.98px) {#backHtmlImg .backHtmlImgClass{height: 244px}}
+
+
+
+#backHtmlImg .backHtmlImgClass img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 1
+}
+/* -------------- PRODUCT DESCRIPTION -----------------------------------------*/
+
+#backHtmlImg #productDesc2 h1{
+    color: #212121;
+    line-height: 25.2px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+    display: contents;
+}
+#backHtmlImg #productDesc2 h1 span{
+    padding: 0;
+    line-height: 1.4;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inline-block;
+}
+#productDesc2 h1 span a{
+    line-height: 25.2px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: start;
+    text-indent: 0px
+}
+#productDesc2 #ratings, #productDesc2 #reviews, #productDesc2 #creditCardScheme, #productDesc2 img{
+    cursor: pointer
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 12.5px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 18.5px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 22.5px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 28.5px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 33.5px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {#productDesc2 h1,#productDesc2 h1 span a, #productDesc2 p, #productDesc2 p span, #productDesc2 p del{font-size: 34.788px}}
+
+
+
+/* ----------------- CART PAGE NAVBAR -----------------------------------------------------------------------------*/
+
+
+.cart-page-navbar form button i{
+    color: #2874F0
+}
+
+.topnav {
+overflow: hidden
+}
+  
+.topnav .search-container {
+    float: right
+}
+  
+.topnav .search-container input[type=text] {
+    padding: 9px 6px;
+    border-radius: 3px 0 0 3px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    width: 92%
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.topnav .search-container input[type=text] {font-size: 12px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.topnav .search-container input[type=text] {font-size: 12px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.topnav .search-container input[type=text] {font-size: 13px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.topnav .search-container input[type=text] {font-size: 14px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.topnav .search-container input[type=text] {font-size: 15px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.topnav .search-container input[type=text] {font-size: 16px}}
+
+  
+.topnav .search-container button {
+    float: right;
+    padding: 10px 3px 2px 1.555px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 1px solid #fff; 
+    background: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    width: 8%
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.topnav .search-container button {font-size: 12px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.topnav .search-container button {font-size: 12px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.topnav .search-container button {font-size: 13px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.topnav .search-container button {font-size: 14px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.topnav .search-container button {font-size: 15px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.topnav .search-container button {font-size: 16px}}
+
+  
+.topnav .search-container button:hover {
+    background: #fff
+}
+
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.dropdown:focus > .dropdown-menu {display: block}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.dropdown:hover > .dropdown-menu {display: block}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.dropdown:hover > .dropdown-menu {display: block}}
+
+
+.navbar .d-flex ul {
+    flex-direction: row-reverse;
+}
+
+  
+/* ------------ CART SECTION --------------------------------------------------*/
+
+body .cust-bg {
+    background: #f1f3f6;
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden
+}
+  
+.cartSection {
+    margin-top: 54px
+}
+
+.cartSectionBg {
+    background: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2)
+}
+.dropdown #navbardrop:hover {
+    text-decoration: none;
+    background: transparent
+}
+#cartPageDropdownId .dropdown-menu .dropdown-item {
+    padding: .25rem 6.888rem .25rem 1.5rem
+}
+
+.dropdown-menu .dropdown-item i{
+    color: #2874F0
+}
+#cartPageDropdownId .dropdown-menu a {
+    font-size: 13.5px
+}
+.cartContainerBorderBottom {
+    border-bottom: 2px solid #2874F0;
+    margin-top: -2px
+}
+
+.cartSectionHeadings h4 {
+    font-weight: 600;
+    letter-spacing: 0.288px
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionHeadings h4{font-size: .88rem}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionHeadings h4{font-size: .99px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionHeadings h4{font-size: 1rem}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionHeadings h4{font-size: 1.2rem}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionHeadings h4{font-size: 1.3rem}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionHeadings h4{font-size: 1.3rem}}
+
+
+.cartSectionHeadings h5, .cartSectionHeadings h5 span {
+    font-weight: 600;
+    letter-spacing: 0.288px
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionHeadings h5, .cartSectionHeadings h5 span{font-size: .77rem}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: .99px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1rem}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1.2rem}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1.3rem}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionHeadings h5,.cartSectionHeadings h5 span{font-size: 1.3rem}}
+
+
+
+
+/* -------------- cartSectionHeadings SVG -----------------------------------------------------------------*/
+
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionHeadings svg{height: 12px;width: 11px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionHeadings svg {height: 12px;width: 11px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionHeadings svg {height: 13px;width: 12px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionHeadings svg {height: 14px;width: 13px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionHeadings svg {height: 16px;width: 15px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionHeadings svg {height: 16px;width: 15px}}
+
+
+.cartSectionButton button {
+    font-weight: 600;
+    color: #2874F0;
+    letter-spacing: 0.288px
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartSectionButton button{font-size: .66rem}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartSectionButton button{font-size: .66rem}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartSectionButton button{font-size: .99rem}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartSectionButton button{font-size: 1rem}}
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartSectionButton button{font-size: 1.1rem}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartSectionButton button{font-size: 1.1rem}}
+
+.cartSectionButton button:hover {
+    cursor: pointer;
+    background: none;
+    color: #2874F0
+}
+
+.qtyBtn button:first-child, .qtyBtn button:last-child {
+    background: linear-gradient(#fff,#f9f9f9);
+    display: inline-block;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    border-radius: 50%;
+    padding-top: 1px;
+    line-height: 1
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 10.688px;height:20px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 10.688px;height:22px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 12.688px;height:24px;width:20px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 14px;height:26px}}
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 16px;height: 28px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.qtyBtn button:first-child, .qtyBtn button:last-child{font-size: 17px;height: 28px}}
+
+
+.qtyBtn .qtyBtnMiddle {
+    display: inline-block;
+    height: 100%;
+    
+    max-width: 100%;
+    /*width: 46px;
+    height: 28px;*/
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #c2c2c2;
+    text-align: center;
+    vertical-align: middle
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.qtyBtn .qtyBtnMiddle {margin: 0 3.688px;width: 100%}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.qtyBtn .qtyBtnMiddle {margin: 0 3.688px;width: 100%}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.qtyBtn .qtyBtnMiddle {margin: 0 3.688px;width: 100%}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.qtyBtn .qtyBtnMiddle {margin: 0 9px;}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.qtyBtn .qtyBtnMiddle {margin: 0 9px;}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.qtyBtn .qtyBtnMiddle {margin: 0 9px;}}
+
+
+.qtyBtn .qtyBtnMiddle input[type=text] {
+    border: none;
+    font-weight: 500;
+    text-align: center;
+    max-width: 100%
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 8.788px;width: 14px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 8.788px;width: 14px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 10.5px;width: 14px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 12.5px;width:38px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 14px;width:40px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.qtyBtn .qtyBtnMiddle input[type=text]{font-size: 14.5px;width:41px}}
+
+.cartItemImg a img {
+    text-align: center
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemImg a img{width: 100%;height: 100%}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemImg a img{width: 90%;height: 90%}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemImg a img{width: 48%;height: 48%}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemImg a img{width: 36%;height: 36%}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemImg a img{width: 36%;height: 36%}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemImg a img{width: 39.588%;height: 39.588%}}
+
+.cartItemDetails .d-flex .itemNameClass {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.cartItemDetails .d-flex .itemNameClass a {
+    color: #212121;
+    line-height: 1;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(40, 116, 240);
+    text-align: start;
+    text-indent: 0px;
+    display: inline
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemDetails .d-flex .itemNameClass a{font-size: 10px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemDetails .d-flex .itemNameClass a{font-size: 10px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemDetails .d-flex .itemNameClass a{font-size: 12px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemDetails .d-flex .itemNameClass a{font-size: 14px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemDetails .d-flex .itemNameClass a{font-size: 16px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemDetails .d-flex .itemNameClass a{font-size: 18px}}
+
+.cartItemDetails .d-flex .itemNameClass a:hover {
+    cursor: pointer;
+    background: transparent;
+    color: rgb(40, 116, 240)
+}
+.cartItemDetails .d-flex .sellerName {
+    color: #878787;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(135, 135, 135);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemDetails .d-flex .sellerName{font-size: 9px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemDetails .d-flex .sellerName{font-size: 9px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemDetails .d-flex .sellerName{font-size: 10px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemDetails .d-flex .sellerName{font-size: 11px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemDetails .d-flex .sellerName{font-size: 12px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemDetails .d-flex .sellerName{font-size: 14px}}
+
+.cartItemDetails .d-flex .itemPrice {
+    display: inline-block;
+    color: #212121;
+    font-weight: 500;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto 
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemDetails .d-flex .itemPrice{font-size: 11.788px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemDetails .d-flex .itemPrice{font-size: 12px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemDetails .d-flex .itemPrice{font-size: 14px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemDetails .d-flex .itemPrice{font-size: 16px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemDetails .d-flex .itemPrice{font-size: 18px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemDetails .d-flex .itemPrice{font-size: 19.788px}}
+
+
+.cartItemDetails .d-flex .itemRealPrice {
+    display: inline-block;
+    color: #878787;
+    text-decoration: line-through;
+    vertical-align: baseline;
+    letter-spacing: 0.788px;
+    word-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: line-through solid rgb(135, 135, 135);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemDetails .d-flex .itemRealPrice{font-size: 9.788px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemDetails .d-flex .itemRealPrice{font-size: 9.788px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemDetails .d-flex .itemRealPrice{font-size: 10px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemDetails .d-flex .itemRealPrice{font-size: 12px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemDetails .d-flex .itemRealPrice{font-size: 14px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemDetails .d-flex .itemRealPrice{font-size: 16px}}
+
+
+.cartItemDetails .d-flex .discountPer {
+    color: #388e3c;
+    font-weight: 500;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(56, 142, 60);
+    text-align: start;
+    text-indent: 0px;
+    cursor: auto
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemDetails .d-flex .discountPer{font-size: 9.788px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemDetails .d-flex .discountPer{font-size: 9.788px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemDetails .d-flex .discountPer{font-size: 10px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemDetails .d-flex .discountPer{font-size: 12px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemDetails .d-flex .discountPer{font-size: 14px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemDetails .d-flex .discountPer{font-size: 16px}}
+
+
+.cartItemDetails .d-flex .offerQty {
+    display: inline-block;
+    margin: 0 10px;
+    
+}
+.cartItemDetails .d-flex .offerQty a {
+    color: #388e3c;
+    font-weight: 500;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(56, 142, 60);
+    text-align: start;
+    text-indent: 0px;
+    cursor: pointer
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemDetails .d-flex .offerQty a{font-size: 9.788px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemDetails .d-flex .offerQty a{font-size: 9.788px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemDetails .d-flex .offerQty a{font-size: 10px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemDetails .d-flex .offerQty a{font-size: 12px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemDetails .d-flex .offerQty a{font-size: 14px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemDetails .d-flex .offerQty a{font-size: 16px}}
+
+.cartItemDetails .d-block .btn-link {
+    color: #212121;
+    font-weight: 500;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cartItemDetails .d-block .btn-link {font-size: 8.788px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cartItemDetails .d-block .btn-link {font-size: 8.788px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cartItemDetails .d-block .btn-link {font-size: 9.788px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cartItemDetails .d-block .btn-link {font-size: 11.788px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cartItemDetails .d-block .btn-link {font-size: 14px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cartItemDetails .d-block .btn-link {font-size: 16px}}
+
+.deliveryDetails p {
+    color: #212121;
+    font-weight: normal;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: start;
+    text-indent: 0px
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.deliveryDetails p {font-size: 9.788px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.deliveryDetails p {font-size: 9.788px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.deliveryDetails p {font-size: 10px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.deliveryDetails p {font-size: 12px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.deliveryDetails p {font-size: 14px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.deliveryDetails p {font-size: 16px}}
+
+.cartItemDetails .d-block .btn-link:hover {
+    cursor: pointer;
+    color: #2874F0
+}
+
+.cart-sticky-bottom {
+    position: -webkit-sticky;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    background: #fff;
+    border-top: 1px solid #f0f0f0;
+    box-shadow: 0 -2px 10px 0 rgba(0,0,0,.1)
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cart-sticky-bottom {padding: 8.688px 15.688px;justify-content: center}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cart-sticky-bottom {padding: 10px 17px;justify-content: space-between}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cart-sticky-bottom {padding: 12px 19px;justify-content: flex-end}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cart-sticky-bottom {padding: 14px 21px;justify-content: flex-end}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cart-sticky-bottom {padding: 16px 23px;justify-content: flex-end;position: sticky;bottom: 0}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cart-sticky-bottom {padding: 18px 25px;justify-content: flex-end;position: sticky;bottom: 0}}
+
+.cart-sticky-bottom a {
+    padding-right: 35.555px;
+    padding-left: 35.555px
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cart-sticky-bottom a {padding-left: 6px;padding-right: 6px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cart-sticky-bottom a {padding-left: 16px;padding-right: 16px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cart-sticky-bottom a {padding-left: 16px;padding-right:16px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cart-sticky-bottom a {padding-left: 35.555px;padding-right: 35.555px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cart-sticky-bottom a {padding-left: 35.555px;padding-right: 35.555px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cart-sticky-bottom a {padding-left: 37.555px;padding-right: 37.555px}}
+
+.cart-sticky-bottom a, .cart-sticky-bottom span {
+    color: #212121;
+    line-height: normal;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: center;
+    text-indent: 0px
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cart-sticky-bottom a, .cart-sticky-bottom span {font-size: 11.688px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cart-sticky-bottom a, .cart-sticky-bottom span {font-size: 11.688px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cart-sticky-bottom a, .cart-sticky-bottom span {font-size: 12px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cart-sticky-bottom a, .cart-sticky-bottom span {font-size: 14px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cart-sticky-bottom a, .cart-sticky-bottom span {font-size: 16px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cart-sticky-bottom a, .cart-sticky-bottom span {font-size: 17.899px}}
+
+.cart-sticky-bottom a:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #212121;
+    text-decoration: none
+}
+.cart-sticky-bottom button {
+    color: #ffffff;
+    line-height: normal;
+    vertical-align: baseline;
+    letter-spacing: 0.888px;
+    word-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: uppercase;
+    text-decoration: none solid rgb(33, 33, 33);
+    text-align: center;
+    text-indent: 0px;
+    background: #fb641b
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.cart-sticky-bottom button {font-size: 11.688px;padding-left: 30px; padding-right: 30px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.cart-sticky-bottom button {font-size: 11.688px;;padding-left: 30px; padding-right: 30px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.cart-sticky-bottom button {font-size: 12px;padding-left: 30px; padding-right: 30px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.cart-sticky-bottom button {font-size: 14px;padding-left: 60px; padding-right: 60px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.cart-sticky-bottom button {font-size: 16px;padding-left: 60px; padding-right: 60px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.cart-sticky-bottom button {font-size: 17.899px;padding-left: 62px; padding-right: 62px}}
+
+.cart-sticky-bottom button:hover {
+    cursor: pointer;
+    background: #fb641b;
+    color: #ffffff;
+    text-decoration: none
+}
+.ftrClass .navbar .navbar-brand {
+    color: #565656;
+    font-weight: 400;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(86, 86, 86);
+    text-align: left;
+    text-indent: 0px;
+    cursor: auto
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.ftrClass .navbar .navbar-brand {font-size: 9.899px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.ftrClass .navbar .navbar-brand {font-size: 9.899px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.ftrClass .navbar .navbar-brand {font-size: 11px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.ftrClass .navbar .navbar-brand {font-size: 12.788px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.ftrClass .navbar .navbar-brand {font-size: 13px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.ftrClass .navbar .navbar-brand {font-size: 14.788px}}
+
+.ftrClass .navbar .btn-link {
+    color: #565656;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(86, 86, 86);
+    text-align: left;
+    text-indent: 0px;
+    cursor: pointer
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.ftrClass .navbar .btn-link {font-size: 9.899px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.ftrClass .navbar .btn-link {font-size: 9.899px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.ftrClass .navbar .btn-link {font-size: 11px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.ftrClass .navbar .btn-link {font-size: 12.788px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.ftrClass .navbar .btn-link {font-size: 13px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.ftrClass .navbar .btn-link {font-size: 14.788px}}
+
+.ftrClass .navbar .btn-link:hover {
+    cursor: pointer;
+    background: transparent;
+    color: #565656
+}
+.ftrClass .navbar .btn-link::after {
+    content: '|'
+}
+
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.ftrClass .navbar .btn-link::after{padding-left: 4px;font-size: 10px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.ftrClass .navbar .btn-link::after{padding-left: 4px;font-size: 10px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.ftrClass .navbar .btn-link::after{padding-left: 5.555px;font-size: 12px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.ftrClass .navbar .btn-link::after{padding-left: 6.555px;font-size: 14px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.ftrClass .navbar .btn-link::after{padding-left: 7.788px;font-size: 17px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.ftrClass .navbar .btn-link::after{padding-left: 8.788px;font-size: 18px}}
+
+.ftrClass .navbar .btn-link:last-child::after {
+    content: none
+}
+
+.ftrClass .navbar .ftrInfo, .ftrClass .navbar .ftrInfo span {
+    color: #565656;
+    font-weight: 400;
+    line-height: 19.6px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none solid rgb(86, 86, 86);
+    text-align: left;
+    text-indent: 0px;
+    cursor: auto
+}
+/*------------------ XS / MOBILE PORTRAIT ---------------------*/
+@media only screen and (min-width: 0px) and (max-width: 575.98px){.ftrClass .navbar .ftrInfo, .ftrClass .navbar .ftrInfo span {font-size: 9.899px}}
+
+/*------------------ SM / MOBILE LANDSCAPE ----------------------------*/
+@media only screen and (min-width: 576px) and (max-width: 767.98px){.ftrClass .navbar .ftrInfo, .ftrClass .navbar .ftrInfo span {font-size: 9.899px}}
+
+
+/*------------------ MD / TABLETS PORTRAIT ----------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991.98px){.ftrClass .navbar .ftrInfo, .ftrClass .navbar .ftrInfo span {font-size: 11px}}
+
+
+/*------------------ LG / IPAD(s) - DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){.ftrClass .navbar .ftrInfo, .ftrClass .navbar .ftrInfo span {font-size: 12.788px}}
+
+
+/*------------------------------- XL / LARGE DESKTOPS - LAPTOPS ----------------------------*/
+@media only screen and (min-width: 1200px) and (max-width: 1499.98px) and (max-width: 1499.98px){.ftrClass .navbar .ftrInfo, .ftrClass .navbar .ftrInfo span {font-size: 13px}}
+
+/*------------------------------- XXL / LARGE DESKTOPS - LAPTOPS ---- 1920*1080 ----------------------------*/
+@media only screen and (min-width: 1500px) and (max-width: 1919.98px) {.ftrClass .navbar .ftrInfo, .ftrClass .navbar .ftrInfo span {font-size: 14.788px}}
+
