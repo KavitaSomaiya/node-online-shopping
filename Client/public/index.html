@@ -230,6 +230,7 @@
     <script>
 
       loadProduct = () => {
+        debugger
         fetch('http://localhost:700/products')
         .then((res) => {
           if (res.status === 200) {
@@ -253,6 +254,7 @@
       }
 
       createIndexImg = (i) => {
+        debugger
         let indexDetails =''
         i.forEach(item => {
           const id = item.dataNumber
@@ -299,7 +301,7 @@
                 <div class='col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 px-1 heartClassSection bg-white'  type='button'>
                   <div class='row no-gutters justify-content-center align-items-center'>
                     <div class='mainImgSectionHeart w-50 text-center'>
-                      <i id="${item.dataNumber}" onclick='toggleAndAddToWishList("${item.dataNumber}", event);' class='heartClassFontSize ${item.className} heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
+                      <i id="${item.dataNumber}" onclick='toggleAndAddToWishList("${item.dataNumber}", event);' class='heartClassFontSiz ${item.className} heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
                     </div>
                   </div>
                 </div>

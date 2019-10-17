@@ -1,93 +1,119 @@
+const Product = require('../models/product.model');
 
-const Product = require('../models/product.models')
-
-// Create and Save a new Product
+// Create and Save a new Note
 exports.create = (req, res) => {
-    if (!req.body.content) {
+    // Validate request
+    if(!req.body.email) {
         return res.status(400).send({
-            message: 'Product content can not be empty.'
-        })
+            message: "Email is required"
+        });
     }
+
+    // Create a Product
     const product = new Product({
-        title: req.body.title || 'Untitled Product',
-        content: req.body.content
-    })
+        name: req.body.name,
+        email: req.body.email,
+        mobile: req.body.mobile,
+        city: req.body.city       
+    });
+
+    // Save Product in the database
     product.save()
     .then(data => {
-        res.send(data)
+        res.send(data);
     })
     .catch(err => {
         res.status(500).send({
-            message: err.message || 'Some error occured while creating the Product.'
-        })
-    })
-}
+            message: err.message || "Some error occurred while creating the Note."
+        });
+    });
+};
 
-// Retrieve and return all products from the database.
+// Retrieve and return all notes from the database.
 exports.findAll = (req, res) => {
     Product.find()
     .then(products => {
-        res.send(products)
-    })
-    .catch(err => {
+        res.send(products);
+    }).catch(err => {
         res.status(500).send({
-            message: err.message || 'Some error occured while retrieving products.'
-        })
-    })
-}
-
+            message: err.message || "Some error occurred while retrieving notes."
+        });
+    });
+};
+// Find a single note with a noteId
 exports.findOne = (req, res) => {
     Product.findById(req.params.productId)
     .then(product => {
-        if (!product) {
+        if(!product) {
             return res.status(404).send({
-                message: 'Product not found with ID' + req.params.productId
-            })
+                message: "Product not found with id " + req.params.productId
+            });            
         }
-        res.send(product)
-    })
-    .catch(err => {
-        if (err.king === 'ObjectId') {
+        res.send(product);
+    }).catch(err => {
+        if(err.kind === 'ObjectId') {
             return res.status(404).send({
-                message: 'Product not found with ID' + req.params.productId
-            })
+                message: "Product not found with id " + req.params.productId
+            });                
         }
         return res.status(500).send({
-            message: 'Error retrieving product with ID' + req.params.productId
-        })
-    })
-}
-
+            message: "Error retrieving product with id " + req.params.productId
+        });
+    });
+};
+// Update a note identified by the noteId in the request
 exports.update = (req, res) => {
-    if (!req.body.content) {
+    // Validate Request
+    if(!req.body.email) {
         return res.status(400).send({
-            message: 'Product content can not be empty.'
-        })
+            message: "Note content can not be empty"
+        });
     }
-    product.findByIdAndUpdate(req.params.productId, {
-        title: req.body.title || 'Untitled Product',
-        content: req.body.content
-    }, {new: true})
-    
-}
 
+    // Find note and update it with the request body
+    Product.findByIdAndUpdate(req.params.productId, {
+        name: req.body.name,
+        email: req.body.email,
+        mobile: req.body.mobile,
+        city: req.body.city
+    }, {new: true})
+    .then(product => {
+        if(!product) {
+            return res.status(404).send({
+                message: "Product not found with id " + req.params.productId
+            });
+        }
+        res.send(product);
+    }).catch(err => {
+        if(err.kind === 'ObjectId') {
+            return res.status(404).send({
+                message: "Product not found with id " + req.params.productId
+            });                
+        }
+        return res.status(500).send({
+            message: "Error updating note with id " + req.params.productId
+        });
+    });
+};
+
+// Delete a note with the specified noteId in the request
 exports.delete = (req, res) => {
     Product.findByIdAndRemove(req.params.productId)
     .then(product => {
-        if (!product) {
+        if(!product) {
             return res.status(404).send({
-                message: 'Product not found with ID' + req.params.productId
-            })
+                message: "Product not found with id " + req.params.productId
+            });
         }
-        res.send({message: 'Product deleted successfully!'})
+        res.send({message: "Product deleted successfully!"});
     }).catch(err => {
-        if (err.kind === 'ObjectId' || err.name === 'NotFound') {
-            return res.status(400).send({
-                message: 'Product not found with ID' + req.params.productId
-            })
+        if(err.kind === 'ObjectId' || err.name === 'NotFound') {
+            return res.status(404).send({
+                message: "Product not found with id " + req.params.productId
+            });                
         }
         return res.status(500).send({
-            message: 'Could not delete product with ID' + req.params.productId
-        })
-    })
-}
+            message: "Could not delete product with id " + req.params.productId
+        });
+    });
+};
