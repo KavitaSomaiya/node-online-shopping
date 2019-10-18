@@ -229,92 +229,10 @@
 
     <script>
 
-      loadProduct = () => {
-        debugger
-        fetch('http://localhost:700/products')
-        .then((res) => {
-          if (res.status === 200) {
-            res.json().then(res => {
-              const productData = res
-              if (productData.length > 0) {
-                createIndexImg(res)
-              } else {
-                let indexDetails =
-                `
-                  <div class='text-center m-5'>No Records found</div>
-                  
-                `
-                document.querySelector('#indexImgId').innerHTML = indexDetails
-              }
-            })
-          } else {
-            alert('Error loading Records.')
-          }
-        })
-      }
-
-      createIndexImg = (i) => {
-        debugger
-        let indexDetails =''
-        i.forEach(item => {
-          const id = item.dataNumber
-          indexDetails +=      
-          `
-          <li class='heartLiClass'>
-            <section class='sortFilterSection m-0 p-0 cust-ouline-0 w-100 mw-100 backHtmlImgList'>
-              <div class="container-fluid">
-                <div class='row no-gutters' id='backHtmlOnOffer'>
-                  <div class='col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4'>
-                    <div class='mainImgSectionP'>
-                      <p class='px-1'>On offer</p>
-                  </div>
-                </div>
-              </div>
-              <div class='row no-gutters my-4 my-sm-4 my-md-4 my-lg-4 my-xl-4' id='backHtmlImg'>
-                <div class='col-2 col-sm-2 col-md-3 col-lg-2 col-xl-2'>
-                  <div>
-                    <div class='backHtmlImgClass' onclick="goToItemDetail('${id}');">
-                      <img alt src='${item.indexImgUrl}' /> 
-                    </div>
-                  </div>
-                </div>
-                <div class='col-8 col-sm-8 col-md-8 col-lg-9 col-xl-9 px-1'>
-                  <div class='d-flex flex-column' id='productDesc2'>
-                    <div>
-                      <h1 class onclick="goToItemDetail('${id}');">
-                        ${item.name}
-                        <span><a href='#'>#JustHere</a></span>
-                      </h1>
-                      <p class='text-black font-weight-bold mb-0'>
-                        ₹${item.price}
-                        <span class='mx-4 text-mute' style='text-decoration: line-through;'>₹${item.retailPrice}</span>
-                        <del class='text-success'>${item.discount}% off</del>
-                      </p>
-                      <div class='d-inline-flex align-items-bottom'>
-                        <p class='mt-2 pt-0 font-weight-bold'>
-                          Exchange available
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class='col-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 px-1 heartClassSection bg-white'  type='button'>
-                  <div class='row no-gutters justify-content-center align-items-center'>
-                    <div class='mainImgSectionHeart w-50 text-center'>
-                      <i id="${item.dataNumber}" onclick='toggleAndAddToWishList("${item.dataNumber}", event);' class='heartClassFontSiz ${item.className} heartClass fa fa-heart p-2 p-sm-2 p-md-2 py-lg-3 px-lg-2 py-xl-4 px-xl-1' aria-hidden='true'></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </li>
-      `
-    })
-  document.querySelector('#indexImgId').innerHTML = indexDetails
-}
+      
 
       
+
 
 
 // addProduct = () => {
@@ -355,14 +273,6 @@
 //   window.location.href = './item-details.html'
 // }
 
-function goToIndexPage () {
-  window.open('./index.html','_self','scrollbars=yes,menubar=yes')
-  window.focus()
-}
-
-function srch () {
-  document.querySelector('#searchId').classList.toggle('d-block')
-}
  
 
 // function toggleAndAddToWishList (it, e) {
@@ -409,19 +319,11 @@ function srch () {
   //e.target.classList.toggle('text-danger')
 //}
 
-
-
-
-function goToWishList () {
-  window.open('./wish-list.html','_self','scrollbars=yes,menubar=yes')
-}
     </script>
-  
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src='./js/index.js' ></script>
     <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
     <script src='./js/bootstrap.min.js' ></script>
-
   </body>
 </html>

@@ -1,7 +1,34 @@
 
-let curItem = JSON.parse(window.localStorage.getItem('curItem'))
+// let curItem = JSON.parse(window.localStorage.getItem('curItem'))
 
-function itemDetailBody () {
+function trimmedId () {
+  var string = window.location.href
+  console.log(string)
+  var trimmedString = string.substring(39)
+  console.log(trimmedString)
+  fetch(`http://localhost:700/products/${trimmedString}`)
+  .then((res) => {
+    if (res.status === 200) {
+      res.json().then(res => {
+        const curItemData = res
+        if (curItemData) {
+          itemDetailBody(res)
+        } else {
+          let itemDetailStrng =
+          `
+            <div class='text-center m-5'>No Records found</div>
+            
+          `
+          document.querySelector('#itemDetail').innerHTML = itemDetailStrng
+        }
+      })
+    } else {
+      alert('Error loading Records.')
+    }
+  })
+}
+
+function itemDetailBody (curItem) {
   let mainImgStrng =
     `
       <div class="container-fluid">

@@ -1,40 +1,70 @@
-const express = require('express');
-const bodyParser = require('body-parser');
 
-// create express app
-const app = express();
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }))
+const app = express() // create express app
 
-// parse requests of content-type - application/json
-app.use(bodyParser.json())
+app.use(cors())
+app.use(bodyParser.urlencoded( {extended: true })) // parse requests of content-type - application/x-www-form-urlencoded
+app.use(bodyParser.json()) // parse requests of content-type - application/json
 
 // Configuring the database
-const dbConfig = require('./config/database-config');
-const mongoose = require('mongoose');
+const dbConfig = require('./config/database-config')
+const mongoose = require('mongoose')
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise
 
 // Connecting to the database
 mongoose.connect(dbConfig.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
+    console.log('Successfully connected to database')
+}).catch(() => {
+    console.log('Could not connect to database. Exiting now...', err)
+    process.exit()
+})
 
-// define a simple route
 app.get('/', (req, res) => {
-    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
-});
+    console.log(req)
+    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."})
+})
 
-// Require Notes routes
-require('./app/routes/product.routes.js')(app)
-// listen for requests
+require('./app/routs/product.routs.js')(app)
+require('./app/routs/cartItem.routs.js')(app)
+
 app.listen(700, () => {
-    console.log("Server is listening on port 700");
-});
+    console.log('Server listening on 700')
+})
+
+
+
+// app.post('/add', function (req, res) {
+//     console.log(req)
+//     var imgUrl = req.body.imgUrl
+//     var name = req.body.name
+//     var price = req.body.price
+//     var retailPrice = req.body.retailPrice
+//     var discount = req.body.discount
+//     var dataNumber = req.body.dataNumber
+//     var obj = {
+//         data : [{
+//             imgUrl,
+//             name,
+//             price,
+//             retailPrice,
+//             discount,
+//             dataNumber
+//         }]
+//     }
+//     var ObjString = JSON.stringify(obj) 
+    
+//     fs.writeFile('product.json', ObjString, 'utf8', function (err) {
+//         if (err) {
+//             console.log('An error occured while writing JSON Object to File."')
+//             return console.log(err)
+//         }
+//         console.log('JSON file has been saved.')
+//     })
+// })

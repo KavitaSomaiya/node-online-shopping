@@ -1,119 +1,123 @@
-const Product = require('../models/product.model');
 
-// Create and Save a new Note
+const Product = require('../models/product.models')
+
+// Create and Save a new Product
 exports.create = (req, res) => {
-    // Validate request
-    if(!req.body.email) {
-        return res.status(400).send({
-            message: "Email is required"
-        });
-    }
-
-    // Create a Product
-    const product = new Product({
-        name: req.body.name,
-        email: req.body.email,
-        mobile: req.body.mobile,
-        city: req.body.city       
-    });
-
-    // Save Product in the database
-    product.save()
+  if (!req.body.name) {
+    return res.status(400).send({
+      message: 'Product name cannot be empty.'
+    })
+  }
+  const product = new Product({
+    indexImgUrl: req.body.indexImgUrl,
+    name: req.body.name,
+    price: req.body.price,
+    retailPrice: req.body.retailPrice,
+    discount: req.body.discount,
+    className: req.body.className,
+    dataNumber: req.body.dataNumber
+  })
+  console.log(product)
+  console.log(req.body.product)
+  product.save()
     .then(data => {
-        res.send(data);
+      res.send(data)
     })
     .catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while creating the Note."
-        });
-    });
-};
+      res.status(500).send({
+        message: err.message || 'Some error occured while creating the Product.'
+      })
+    })
+}
 
-// Retrieve and return all notes from the database.
+// Retrieve and return all products from the database.
 exports.findAll = (req, res) => {
-    Product.find()
+  Product.find()
     .then(products => {
-        res.send(products);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || "Some error occurred while retrieving notes."
-        });
-    });
-};
-// Find a single note with a noteId
+      res.send(products)
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || 'Some error occured while retrieving products.'
+      })
+    })
+}
+
 exports.findOne = (req, res) => {
-    Product.findById(req.params.productId)
+  Product.findById(req.params.productId)
     .then(product => {
-        if(!product) {
-            return res.status(404).send({
-                message: "Product not found with id " + req.params.productId
-            });            
-        }
-        res.send(product);
-    }).catch(err => {
-        if(err.kind === 'ObjectId') {
-            return res.status(404).send({
-                message: "Product not found with id " + req.params.productId
-            });                
-        }
-        return res.status(500).send({
-            message: "Error retrieving product with id " + req.params.productId
-        });
-    });
-};
-// Update a note identified by the noteId in the request
+      if (!product) {
+        return res.status(404).send({
+          message: 'Product not found with ID' + req.params.productId
+        })
+      }
+      res.send(product)
+    })
+    .catch(err => {
+      if (err.king === 'ObjectId') {
+        return res.status(404).send({
+          message: 'Product not found with ID' + req.params.productId
+        })
+      }
+      return res.status(500).send({
+        message: 'Error retrieving product with ID' + req.params.productId
+      })
+    })
+}
+
+
 exports.update = (req, res) => {
-    // Validate Request
-    if(!req.body.email) {
-        return res.status(400).send({
-            message: "Note content can not be empty"
-        });
-    }
+  console.log(req.body)
+  if(!req.body) {
+      return res.status(400).send({
+          message: "Product content can not be empty"
+      })
+  }
+  Product.findByIdAndUpdate(req.params.productId, {
+    indexImgUrl: req.body.indexImgUrl,
+    name: req.body.name,
+    price: req.body.price,
+    retailPrice: req.body.retailPrice,
+    discount: req.body.discount,
+    className: req.body.className,
+    dataNumber: req.body.dataNumber
+  }, {new: true})
+  .then(product => {
+      if(!product) {
+          return res.status(404).send({
+              message: "Product not found with ID " + req.params.productId
+          })
+      }
+      res.send(product);
+  }).catch(err => {
+      if(err.kind === 'ObjectId') {
+          return res.status(404).send({
+              message: "Product not found with ID " + req.params.productId
+          })           
+      }
+      return res.status(500).send({
+          message: "Error updating product with ID " + req.params.productId
+      })
+  })
+}
 
-    // Find note and update it with the request body
-    Product.findByIdAndUpdate(req.params.productId, {
-        name: req.body.name,
-        email: req.body.email,
-        mobile: req.body.mobile,
-        city: req.body.city
-    }, {new: true})
-    .then(product => {
-        if(!product) {
-            return res.status(404).send({
-                message: "Product not found with id " + req.params.productId
-            });
-        }
-        res.send(product);
-    }).catch(err => {
-        if(err.kind === 'ObjectId') {
-            return res.status(404).send({
-                message: "Product not found with id " + req.params.productId
-            });                
-        }
-        return res.status(500).send({
-            message: "Error updating note with id " + req.params.productId
-        });
-    });
-};
-
-// Delete a note with the specified noteId in the request
 exports.delete = (req, res) => {
-    Product.findByIdAndRemove(req.params.productId)
-    .then(product => {
-        if(!product) {
-            return res.status(404).send({
-                message: "Product not found with id " + req.params.productId
-            });
-        }
-        res.send({message: "Product deleted successfully!"});
-    }).catch(err => {
-        if(err.kind === 'ObjectId' || err.name === 'NotFound') {
-            return res.status(404).send({
-                message: "Product not found with id " + req.params.productId
-            });                
-        }
-        return res.status(500).send({
-            message: "Could not delete product with id " + req.params.productId
-        });
-    });
-};
+  Product.findByIdAndRemove(req.params.productId)
+  .then(product => {
+      if(!product) {
+          return res.status(404).send({
+              message: "Product not found with id " + req.params.productId
+          })
+      }
+      res.send({message: "Product deleted successfully!"})
+  }).catch(err => {
+      if(err.kind === 'ObjectId' || err.name === 'NotFound') {
+          return res.status(404).send({
+              message: "Product not found with id " + req.params.productId
+          })
+      }
+      return res.status(500).send({
+          message: "Could not delete product with id " + req.params.productId
+      })
+  })
+}

@@ -57,7 +57,7 @@ function createCartData () {
               <div class='mw-100 pt-1 pt-sm-1 pt-md-1 pt-lg-2 pt-xl-2 deliveryDetails' style="width: 31%;">
                 <p>
                   Delivery by, ${c.deliveryDate}
-                </p>                      
+                </p>
               </div>                       
             </li>
           `
