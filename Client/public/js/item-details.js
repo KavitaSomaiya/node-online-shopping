@@ -4,7 +4,7 @@
 function trimmedId () {
   var string = window.location.href
   console.log(string)
-  var trimmedString = string.substring(39)
+  var trimmedString = string.split('?')[1]
   console.log(trimmedString)
   fetch(`http://localhost:700/products/${trimmedString}`)
   .then((res) => {
@@ -116,20 +116,46 @@ function toggleDown (e) {
   }
 }
 
-function addToCart () {
-  let cartItem = curItem
-  var cartItems = window.localStorage.getItem('cartItems')
-  if (cartItems) {
-    cartItems = JSON.parse(cartItems)
-    cartItems.push(cartItem)
-  } else {
-    cartItems = []
-    cartItems.push(cartItem)
-  }
-  cartItems = cartItems.filter(Boolean)
-  document.querySelector('#cartQty').textContent = cartItems.length
-  window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+addToCart = () => {
+  debugger
+  var string = window.location.href
+  console.log(string)
+  var trimmedString = string.split('?')[1]
+  console.log(trimmedString)
+  fetch(`http://localhost:700/products/${trimmedString}`)
+  .then((res) => {
+    if (res.status === 200) {
+      res.json().then(res => {
+        const curItemData = res
+        if (curItemData) {
+          tempAlert (msg,duration)
+        } else {
+          `
+            <div class='text-center m-5'>No Records found</div>
+            
+          `
+        }
+      })
+    } else {
+      alert('Error loading Records.')
+    }
+  })
 }
+
+// function addToCart () {
+//   let cartItem = curItem
+//   var cartItems = window.localStorage.getItem('cartItems')
+//   if (cartItems) {
+//     cartItems = JSON.parse(cartItems)
+//     cartItems.push(cartItem)
+//   } else {
+//     cartItems = []
+//     cartItems.push(cartItem)
+//   }
+//   cartItems = cartItems.filter(Boolean)
+//   document.querySelector('#cartQty').textContent = cartItems.length
+//   window.localStorage.setItem('cartItems', JSON.stringify(cartItems))
+// }
 
 
 function tempAlert (msg,duration) {
@@ -144,4 +170,5 @@ function tempAlert (msg,duration) {
 
 function goToCartPage () {
   window.location.href = './cart.html'
+  window.focus()
 }

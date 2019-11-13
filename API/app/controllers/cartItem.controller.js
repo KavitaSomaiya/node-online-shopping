@@ -3,20 +3,20 @@ const CartItem = require('../models/cartItem.models')
 
 // Create and Save a new Product
 exports.create = (req, res) => {
-  if (!req.body.name) {
-    return res.status(400).send({
-      message: 'cart Item name cannot be empty.'
-    })
-  }
+  // if (!req.body.name) {
+  //   return res.status(400).send({
+  //     message: 'cart Item name cannot be empty.'
+  //   })
+  // }
   const cartItem = new CartItem({
-    indexImgUrl: req.body.indexImgUrl,
-    name: req.body.name,
+    // indexImgUrl: req.body.indexImgUrl,
+    // name: req.body.name,
     quantity: req.body.quantity,
     sellerName: req.body.sellerName,
-    price: req.body.price,
-    retailPrice: req.body.retailPrice,
+    // price: req.body.price,
+    // retailPrice: req.body.retailPrice,
     offersApplied: req.body.offersApplied,
-    dataNumber: req.body.dataNumber,
+    // dataNumber: req.body.dataNumber,
     deliveryDate: req.body.deliveryDate
   })
   console.log(cartItem)
@@ -35,14 +35,20 @@ exports.create = (req, res) => {
 // Retrieve and return all products from the database.
 exports.findAll = (req, res) => {
   CartItem.find()
-    .then(cartItems => {
-      res.send(cartItems)
+  // .populate('cartProducts').exec(function (err, c) {
+  //   if (err) {
+  //     return handleError(err)
+  //   }
+
+  // })
+  .then(cartItems => {
+    res.send(cartItems)
+  })
+  .catch(err => {
+    res.status(500).send({
+      message: err.message || 'Some error occured while retrieving cart items.'
     })
-    .catch(err => {
-      res.status(500).send({
-        message: err.message || 'Some error occured while retrieving cart items.'
-      })
-    })
+  })
 }
 
 exports.findOne = (req, res) => {
