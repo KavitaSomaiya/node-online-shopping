@@ -11,6 +11,7 @@ exports.create = (req, res) => {
   const product = new Product({
     indexImgUrl: req.body.indexImgUrl,
     name: req.body.name,
+    sellerName: req.body.sellerName,
     price: req.body.price,
     retailPrice: req.body.retailPrice,
     discount: req.body.discount,

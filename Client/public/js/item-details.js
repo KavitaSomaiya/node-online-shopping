@@ -102,6 +102,37 @@ function itemDetailBody (curItem) {
   document.querySelector('#itemDetail').innerHTML = itemDetailStrng
 }
 
+function addToCart () {
+  var string = window.location.href
+  console.log(string)
+  var trimmedString = string.split('?')[1]
+  const newCartData = {
+    productId: trimmedString,
+    quantity: '1',
+    offersApplied: '3',
+    deliveryDate: 'Not Available',
+    userId: 'Not Available'
+  }
+  var myHeaders = new Headers()
+  myHeaders.append('Content-Type', 'application/json')
+  fetch(`http://localhost:700/cartItems`, {
+    method: 'POST',
+    headers: myHeaders,
+    mode: 'cors',
+    cache: 'default',
+    body: JSON.stringify(newCartData)
+
+  }).then((response) => {
+    if (response.status === 200) {
+      tempAlert (msg,duration)
+      // alert('Item added successfully...!!!')
+    }
+  }).catch((e) => {
+    console.log('error', e)
+  })
+}
+
+
 function toggleHeartColor () {
   document.querySelector('#like-btn').classList.toggle('text-danger')
 }
@@ -116,31 +147,8 @@ function toggleDown (e) {
   }
 }
 
-addToCart = () => {
-  debugger
-  var string = window.location.href
-  console.log(string)
-  var trimmedString = string.split('?')[1]
-  console.log(trimmedString)
-  fetch(`http://localhost:700/products/${trimmedString}`)
-  .then((res) => {
-    if (res.status === 200) {
-      res.json().then(res => {
-        const curItemData = res
-        if (curItemData) {
-          tempAlert (msg,duration)
-        } else {
-          `
-            <div class='text-center m-5'>No Records found</div>
-            
-          `
-        }
-      })
-    } else {
-      alert('Error loading Records.')
-    }
-  })
-}
+
+
 
 // function addToCart () {
 //   let cartItem = curItem
